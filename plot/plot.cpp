@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
     QGraphicsView * view = new QGraphicsView();
     QGraphicsScene * scene = new QGraphicsScene();
     view->setScene(scene);
-
+    scene->addLine(-100, 0,100, 0, QPen(Qt::blue));
+    scene->addLine(0, -100,0, 100, QPen(Qt::blue));
     for(int i = 0; i< points.size(); i++)
         scene->addEllipse(points[i].x(), points[i].y(), 1, 1);
 
